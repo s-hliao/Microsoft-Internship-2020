@@ -1,0 +1,4 @@
+C:\Users\henry\source\repos\splitPhoto\splitPhoto\bin\Debug\netcoreapp3.0\splitPhoto.exe
+C:\Users\henry\source\repos\splitPhoto\splitPhoto\obj\Debug\netcoreapp3.0\splitPhoto.csprojAssemblyReference.cache
+C:\Users\henry\source\repos\splitPhoto\splitPhoto\obj\Debug\netcoreapp3.0\splitPhoto.AssemblyInfoInputs.cache
+C:\Users\henry\source\repos\splitPhoto\splitPhoto\obj\Debug\netcoreapp3.0\splitPhoto.AssemblyInfo.cs
