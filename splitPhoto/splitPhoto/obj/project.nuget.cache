@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "lRQ9SdvnCIFzU8NZjmc6IsgdkzCItyyFGmTXZm0Tt6FAwmEdgj8eCPIb9vG95og3EwIPuBh5FQcDt23jq1hB1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\henry\\Documents\\Grind\\Microsoft-Internship-2020\\splitPhoto\\splitPhoto\\splitPhoto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\henry\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\henry\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\henry\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\henry\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\henry\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\henry\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\henry\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
