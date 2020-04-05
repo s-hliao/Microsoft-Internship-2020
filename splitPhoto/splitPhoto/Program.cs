@@ -22,7 +22,7 @@ namespace splitPhoto
                 {
                     Console.WriteLine("found file");
                     Image img = Image.FromStream(BitmapStream);
-                    Bitmap bmp = new Bitmap(img);
+                    Bitmap bmp = new Bitmap(img);ur
 
                     Graphics g = Graphics.FromImage(bmp);
                     for (int i = 0; i < 8; i++)
