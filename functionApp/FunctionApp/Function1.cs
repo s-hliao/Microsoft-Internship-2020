@@ -107,7 +107,7 @@ namespace FunctionApp
                             }
                             else
                             {
-                                pieces[i, j] = null;
+                                pieces[i, j] = "unknown";
                             }
                         }
 
