@@ -34,6 +34,8 @@ namespace FunctionApp
             string jsonString = streamReader.ReadToEnd();
             JObject jsonObj = JObject.Parse(jsonString);
 
+            //log.LogInformation("jsonParsed");
+
             JToken blob =  jsonObj["imageInfo"]["imageRequestInfo"]["blob"];
 
             
@@ -41,8 +43,11 @@ namespace FunctionApp
 
             if (blob != null)
             {
+               // log.LogInformation("blob seen");
                 string blobString = blob.Value<string>();
                 byte[] blobData = Convert.FromBase64String(blobString);
+
+                //log.LogInformation("blob read");
 
                 Image img = Image.Load<Rgba32>(blobData);
                 img.Mutate(x => x.Grayscale());
@@ -52,11 +57,13 @@ namespace FunctionApp
                     for(int j = 0; j<8; j++)
                     {
                         Image clone = img.Clone(x => x.
-                            Crop(new Rectangle(i * img.Width / 8, j * img.Height / 8, img.Width / 8, img.Height / 8)));
+                            Crop(new Rectangle(j * img.Width / 8, i * img.Height / 8, img.Width / 8, img.Height / 8)));
                         images[i,j] = clone;
 
                     }
                 }
+                //log.LogInformation("image cropped");
+
                 List<List<byte[]>> imageBytes = new List<List<byte[]>>();
 
                 for (int i = 0; i < 8; i++)
@@ -68,11 +75,13 @@ namespace FunctionApp
                         {
                             IImageEncoder imgEnc = images[i,j].GetConfiguration().ImageFormatsManager.FindEncoder(JpegFormat.Instance);
                             images[i, j].Save(memoryStream, imgEnc);
-                            imageBytes[j].Add(memoryStream.ToArray());
+                            imageBytes[i].Add(memoryStream.ToArray());
                         }
 
                     }
                 }
+                //log.LogInformation("images streamed to byte");
+
                 HttpResponseMessage response;
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("Prediction-Key", "8d1318bea5b24b39a4827e78146f8edd");
@@ -88,18 +97,27 @@ namespace FunctionApp
                             response.EnsureSuccessStatusCode();
                             string responseBody = await response.Content.ReadAsStringAsync();
 
+                            log.LogInformation(responseBody);
+
                             JObject tagged = JObject.Parse(responseBody);
+
+                            //log.LogInformation("tag confirmed");
+
                             string finalTag = null;
                             double max = 0;
-                            foreach(JToken tag in tagged["Predictions"])
+                            foreach(JObject tag in tagged["predictions"])
                             {
-                                double prob = tag["Probability"].Value<double>();
+                                //log.LogInformation("Predictions found");
+                                double prob = tag["probability"].Value<double>();
+                                //log.LogInformation("Probability found");
                                 if (prob>.5 && prob>max)
                                 {
-                                    finalTag = tag["TagName"].Value<string>();
+                                    finalTag = tag["tagName"].Value<string>();
                                     max = prob;
                                 }
                             }
+
+                            //log.LogInformation("predicted");
 
                             if (finalTag != null)
                             {
@@ -123,6 +141,8 @@ namespace FunctionApp
 
             JObject resp = new JObject();
             resp.Add(new JProperty("board", pieces));
+
+            log.LogInformation("returned");
             return new JsonResult(resp);
         }
     }
