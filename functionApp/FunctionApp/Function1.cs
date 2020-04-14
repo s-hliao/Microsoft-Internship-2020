@@ -18,6 +18,7 @@ using SixLabors.ImageSharp.Advanced;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using AdaptiveCards;
 
 namespace FunctionApp
 {
@@ -133,7 +134,826 @@ namespace FunctionApp
                        
                     }
                 }
+                AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0))
+                {
+                    Body = new List<AdaptiveElement>()
 
+                {
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a8",
+                                             Value = pieces[0][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b8",
+                                             Value = pieces[0][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c8",
+                                             Value = pieces[0][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d8",
+                                             Value = pieces[0][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e8",
+                                             Value = pieces[0][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f8",
+                                             Value = pieces[0][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g8",
+                                             Value = pieces[0][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h8",
+                                             Value = pieces[0][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a7",
+                                             Value = pieces[1][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b7",
+                                             Value = pieces[1][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c7",
+                                             Value = pieces[1][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d7",
+                                             Value = pieces[1][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e7",
+                                             Value = pieces[1][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f7",
+                                             Value = pieces[1][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g7",
+                                             Value = pieces[1][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h7",
+                                             Value = pieces[1][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a6",
+                                             Value = pieces[2][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b6",
+                                             Value = pieces[2][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c6",
+                                             Value = pieces[2][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d6",
+                                             Value = pieces[2][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e6",
+                                             Value = pieces[2][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f6",
+                                             Value = pieces[2][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g6",
+                                             Value = pieces[2][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h6",
+                                             Value = pieces[2][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a5",
+                                             Value = pieces[3][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b5",
+                                             Value = pieces[3][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c5",
+                                             Value = pieces[3][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d5",
+                                             Value = pieces[3][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e5",
+                                             Value = pieces[3][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f5",
+                                             Value = pieces[3][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g5",
+                                             Value = pieces[3][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h5",
+                                             Value = pieces[3][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a4",
+                                             Value = pieces[4][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b4",
+                                             Value = pieces[4][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c4",
+                                             Value = pieces[4][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d4",
+                                             Value = pieces[4][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e4",
+                                             Value = pieces[4][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f4",
+                                             Value = pieces[4][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g4",
+                                             Value = pieces[4][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h4",
+                                             Value = pieces[4][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a3",
+                                             Value = pieces[5][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b3",
+                                             Value = pieces[5][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c3",
+                                             Value = pieces[5][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d3",
+                                             Value = pieces[5][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e3",
+                                             Value = pieces[5][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f3",
+                                             Value = pieces[5][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g3",
+                                             Value = pieces[5][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h3",
+                                             Value = pieces[5][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a2",
+                                             Value = pieces[6][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b2",
+                                             Value = pieces[6][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c2",
+                                             Value = pieces[6][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d2",
+                                             Value = pieces[6][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e2",
+                                             Value = pieces[6][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f2",
+                                             Value = pieces[6][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g2",
+                                             Value = pieces[6][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h2",
+                                             Value = pieces[6][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items =
+                        {
+                            new AdaptiveColumnSet()
+                            {
+                                Columns =  {
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "a1",
+                                             Value = pieces[7][0],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "b1",
+                                             Value = pieces[7][1],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "c1",
+                                             Value = pieces[7][2],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "d1",
+                                             Value = pieces[7][3],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "e1",
+                                             Value = pieces[7][4],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "f1",
+                                             Value = pieces[7][5],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "g1",
+                                             Value = pieces[7][6],
+                                        }
+                                    }
+                                },
+                                new AdaptiveColumn()
+                                {
+                                    Items =
+                                    {
+                                    new AdaptiveTextInput()
+                                        {
+                                             Id = "h1",
+                                             Value = pieces[7][7],
+                                        }
+                                    }
+                                },
+                                }
+                            }
+                        }
+                    },
+                    new AdaptiveContainer()
+                    {
+                        Items = new List<AdaptiveElement>()
+                        {
+                            new AdaptiveActionSet()
+                            {
+                                Actions = new List<AdaptiveAction>()
+                                {
+                                new AdaptiveSubmitAction()
+                                    {
+                                        Type = "Action.Http",
+                                        Title = "Queen",
+                                        Id = "Queen",
+                                    },
+                                }
+                        }
+                    }
+                }
+                }
+                };
+
+                String json = card.ToJson();
+                
             }
 
 
