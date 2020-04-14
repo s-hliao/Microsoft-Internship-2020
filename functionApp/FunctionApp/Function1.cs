@@ -37,7 +37,7 @@ namespace FunctionApp
 
             //log.LogInformation("jsonParsed");
 
-            JToken blob =  jsonObj["imageInfo"]["imageRequestInfo"]["blob"];
+            JToken blob = jsonObj["imageInfo"] ["imageRequestInfo"][ "blob"];
 
             
             string[,]pieces = new string[8,8];
@@ -153,7 +153,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a8",
-                                             Value = pieces[0][0],
+                                             Value = pieces[0,0],
                                         }
                                     }
                                 },
@@ -164,7 +164,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b8",
-                                             Value = pieces[0][1],
+                                             Value = pieces[0,1],
                                         }
                                     }
                                 },
@@ -175,7 +175,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c8",
-                                             Value = pieces[0][2],
+                                             Value = pieces[0,2],
                                         }
                                     }
                                 },
@@ -186,7 +186,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d8",
-                                             Value = pieces[0][3],
+                                             Value = pieces[0,3],
                                         }
                                     }
                                 },
@@ -197,7 +197,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e8",
-                                             Value = pieces[0][4],
+                                             Value = pieces[0,4],
                                         }
                                     }
                                 },
@@ -208,7 +208,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f8",
-                                             Value = pieces[0][5],
+                                             Value = pieces[0,5],
                                         }
                                     }
                                 },
@@ -219,7 +219,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g8",
-                                             Value = pieces[0][6],
+                                             Value = pieces[0,6],
                                         }
                                     }
                                 },
@@ -230,7 +230,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h8",
-                                             Value = pieces[0][7],
+                                             Value = pieces[0,7],
                                         }
                                     }
                                 },
@@ -252,7 +252,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a7",
-                                             Value = pieces[1][0],
+                                             Value = pieces[1,0],
                                         }
                                     }
                                 },
@@ -263,7 +263,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b7",
-                                             Value = pieces[1][1],
+                                             Value = pieces[1,1],
                                         }
                                     }
                                 },
@@ -274,7 +274,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c7",
-                                             Value = pieces[1][2],
+                                             Value = pieces[1,2],
                                         }
                                     }
                                 },
@@ -285,7 +285,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d7",
-                                             Value = pieces[1][3],
+                                             Value = pieces[1,3],
                                         }
                                     }
                                 },
@@ -296,7 +296,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e7",
-                                             Value = pieces[1][4],
+                                             Value = pieces[1,4],
                                         }
                                     }
                                 },
@@ -307,7 +307,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f7",
-                                             Value = pieces[1][5],
+                                             Value = pieces[1,5],
                                         }
                                     }
                                 },
@@ -318,7 +318,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g7",
-                                             Value = pieces[1][6],
+                                             Value = pieces[1,6],
                                         }
                                     }
                                 },
@@ -329,7 +329,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h7",
-                                             Value = pieces[1][7],
+                                             Value = pieces[1,7],
                                         }
                                     }
                                 },
@@ -351,7 +351,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a6",
-                                             Value = pieces[2][0],
+                                             Value = pieces[2,0],
                                         }
                                     }
                                 },
@@ -362,7 +362,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b6",
-                                             Value = pieces[2][1],
+                                             Value = pieces[2,1],
                                         }
                                     }
                                 },
@@ -373,7 +373,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c6",
-                                             Value = pieces[2][2],
+                                             Value = pieces[2,2],
                                         }
                                     }
                                 },
@@ -384,7 +384,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d6",
-                                             Value = pieces[2][3],
+                                             Value = pieces[2,3],
                                         }
                                     }
                                 },
@@ -395,7 +395,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e6",
-                                             Value = pieces[2][4],
+                                             Value = pieces[2,4],
                                         }
                                     }
                                 },
@@ -406,7 +406,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f6",
-                                             Value = pieces[2][5],
+                                             Value = pieces[2,5],
                                         }
                                     }
                                 },
@@ -417,7 +417,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g6",
-                                             Value = pieces[2][6],
+                                             Value = pieces[2,6],
                                         }
                                     }
                                 },
@@ -428,7 +428,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h6",
-                                             Value = pieces[2][7],
+                                             Value = pieces[2,7],
                                         }
                                     }
                                 },
@@ -450,7 +450,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a5",
-                                             Value = pieces[3][0],
+                                             Value = pieces[3,0],
                                         }
                                     }
                                 },
@@ -461,7 +461,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b5",
-                                             Value = pieces[3][1],
+                                             Value = pieces[3,1],
                                         }
                                     }
                                 },
@@ -472,7 +472,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c5",
-                                             Value = pieces[3][2],
+                                             Value = pieces[3,2],
                                         }
                                     }
                                 },
@@ -483,7 +483,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d5",
-                                             Value = pieces[3][3],
+                                             Value = pieces[3,3],
                                         }
                                     }
                                 },
@@ -494,7 +494,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e5",
-                                             Value = pieces[3][4],
+                                             Value = pieces[3,4],
                                         }
                                     }
                                 },
@@ -505,7 +505,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f5",
-                                             Value = pieces[3][5],
+                                             Value = pieces[3,5],
                                         }
                                     }
                                 },
@@ -516,7 +516,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g5",
-                                             Value = pieces[3][6],
+                                             Value = pieces[3,6],
                                         }
                                     }
                                 },
@@ -527,7 +527,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h5",
-                                             Value = pieces[3][7],
+                                             Value = pieces[3,7],
                                         }
                                     }
                                 },
@@ -549,7 +549,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a4",
-                                             Value = pieces[4][0],
+                                             Value = pieces[4,0],
                                         }
                                     }
                                 },
@@ -560,7 +560,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b4",
-                                             Value = pieces[4][1],
+                                             Value = pieces[4,1],
                                         }
                                     }
                                 },
@@ -571,7 +571,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c4",
-                                             Value = pieces[4][2],
+                                             Value = pieces[4,2],
                                         }
                                     }
                                 },
@@ -582,7 +582,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d4",
-                                             Value = pieces[4][3],
+                                             Value = pieces[4,3],
                                         }
                                     }
                                 },
@@ -593,7 +593,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e4",
-                                             Value = pieces[4][4],
+                                             Value = pieces[4,4],
                                         }
                                     }
                                 },
@@ -604,7 +604,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f4",
-                                             Value = pieces[4][5],
+                                             Value = pieces[4,5],
                                         }
                                     }
                                 },
@@ -615,7 +615,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g4",
-                                             Value = pieces[4][6],
+                                             Value = pieces[4,6],
                                         }
                                     }
                                 },
@@ -626,7 +626,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h4",
-                                             Value = pieces[4][7],
+                                             Value = pieces[4,7],
                                         }
                                     }
                                 },
@@ -648,7 +648,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a3",
-                                             Value = pieces[5][0],
+                                             Value = pieces[5,0],
                                         }
                                     }
                                 },
@@ -659,7 +659,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b3",
-                                             Value = pieces[5][1],
+                                             Value = pieces[5,1],
                                         }
                                     }
                                 },
@@ -670,7 +670,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c3",
-                                             Value = pieces[5][2],
+                                             Value = pieces[5,2],
                                         }
                                     }
                                 },
@@ -681,7 +681,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d3",
-                                             Value = pieces[5][3],
+                                             Value = pieces[5,3],
                                         }
                                     }
                                 },
@@ -692,7 +692,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e3",
-                                             Value = pieces[5][4],
+                                             Value = pieces[5,4],
                                         }
                                     }
                                 },
@@ -703,7 +703,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f3",
-                                             Value = pieces[5][5],
+                                             Value = pieces[5,5],
                                         }
                                     }
                                 },
@@ -714,7 +714,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g3",
-                                             Value = pieces[5][6],
+                                             Value = pieces[5,6],
                                         }
                                     }
                                 },
@@ -725,7 +725,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h3",
-                                             Value = pieces[5][7],
+                                             Value = pieces[5,7],
                                         }
                                     }
                                 },
@@ -747,7 +747,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a2",
-                                             Value = pieces[6][0],
+                                             Value = pieces[6,0],
                                         }
                                     }
                                 },
@@ -758,7 +758,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b2",
-                                             Value = pieces[6][1],
+                                             Value = pieces[6,1],
                                         }
                                     }
                                 },
@@ -769,7 +769,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c2",
-                                             Value = pieces[6][2],
+                                             Value = pieces[6,2],
                                         }
                                     }
                                 },
@@ -780,7 +780,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d2",
-                                             Value = pieces[6][3],
+                                             Value = pieces[6,3],
                                         }
                                     }
                                 },
@@ -791,7 +791,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e2",
-                                             Value = pieces[6][4],
+                                             Value = pieces[6,4],
                                         }
                                     }
                                 },
@@ -802,7 +802,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f2",
-                                             Value = pieces[6][5],
+                                             Value = pieces[6,5],
                                         }
                                     }
                                 },
@@ -813,7 +813,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g2",
-                                             Value = pieces[6][6],
+                                             Value = pieces[6,6],
                                         }
                                     }
                                 },
@@ -824,7 +824,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h2",
-                                             Value = pieces[6][7],
+                                             Value = pieces[6,7],
                                         }
                                     }
                                 },
@@ -846,7 +846,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "a1",
-                                             Value = pieces[7][0],
+                                             Value = pieces[7,0],
                                         }
                                     }
                                 },
@@ -857,7 +857,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "b1",
-                                             Value = pieces[7][1],
+                                             Value = pieces[7,1],
                                         }
                                     }
                                 },
@@ -868,7 +868,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "c1",
-                                             Value = pieces[7][2],
+                                             Value = pieces[7,2],
                                         }
                                     }
                                 },
@@ -879,7 +879,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "d1",
-                                             Value = pieces[7][3],
+                                             Value = pieces[7,3],
                                         }
                                     }
                                 },
@@ -890,7 +890,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "e1",
-                                             Value = pieces[7][4],
+                                             Value = pieces[7,4],
                                         }
                                     }
                                 },
@@ -901,7 +901,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "f1",
-                                             Value = pieces[7][5],
+                                             Value = pieces[7,5],
                                         }
                                     }
                                 },
@@ -912,7 +912,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "g1",
-                                             Value = pieces[7][6],
+                                             Value = pieces[7,6],
                                         }
                                     }
                                 },
@@ -923,7 +923,7 @@ namespace FunctionApp
                                     new AdaptiveTextInput()
                                         {
                                              Id = "h1",
-                                             Value = pieces[7][7],
+                                             Value = pieces[7,7],
                                         }
                                     }
                                 },
@@ -953,8 +953,35 @@ namespace FunctionApp
                 };
 
                 String json = card.ToJson();
-                
+
+                var skillCustomData = new
+                {
+                    template = "AdaptiveCards",
+                    cardjson = json,
+                };
+
+                var skillResponse = new
+                {
+                    results = new[]
+    {
+                    new {
+                        tags = new [] {
+                            new {
+                                actions = new [] {
+                                    new {
+                                        actionType = "Custom",                  //This is required to be set to "Custom"
+                                        customData = skillCustomData,              //Set to custom data object
+                                        providerName = "Chess Recognizer"        //The skill name as provider name
+                                   }
+                                },
+                            }
+                        }
+                    }
+                }
+                };
+
             }
+            
 
 
 
