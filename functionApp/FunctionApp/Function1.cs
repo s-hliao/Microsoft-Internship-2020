@@ -42,6 +42,8 @@ namespace FunctionApp
             
             string[,]pieces = new string[8,8];
 
+            JObject resp = new JObject();
+
             if (blob != null)
             {
                // log.LogInformation("blob seen");
@@ -98,7 +100,7 @@ namespace FunctionApp
                             response.EnsureSuccessStatusCode();
                             string responseBody = await response.Content.ReadAsStringAsync();
 
-                            log.LogInformation(responseBody);
+                           // log.LogInformation(responseBody);
 
                             JObject tagged = JObject.Parse(responseBody);
 
@@ -118,7 +120,7 @@ namespace FunctionApp
                                 }
                             }
 
-                            //log.LogInformation("predicted");
+                            log.LogInformation("predicted");
 
                             if (finalTag != null)
                             {
@@ -134,7 +136,7 @@ namespace FunctionApp
                        
                     }
                 }
-                AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0))
+                AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion(1, 2))
                 {
                     Body = new List<AdaptiveElement>()
 
@@ -931,34 +933,28 @@ namespace FunctionApp
                             }
                         }
                     },
-                    new AdaptiveContainer()
-                    {
-                        Items = new List<AdaptiveElement>()
-                        {
-                            new AdaptiveActionSet()
-                            {
-                                Actions = new List<AdaptiveAction>()
-                                {
-                                new AdaptiveSubmitAction()
-                                    {
-                                        Type = "Action.Http",
-                                        Title = "Queen",
-                                        Id = "Queen",
-                                    },
-                                }
-                        }
-                    }
-                }
                 }
                 };
 
-                String json = card.ToJson();
+                string json = card.ToJson();
+
+                JObject total = new JObject();
+
+                total.Add(new JProperty("json", card.ToJson()));
+
+                return new JsonResult(total);
+
+               /* log.LogInformation(json);
 
                 var skillCustomData = new
                 {
                     template = "AdaptiveCards",
                     cardjson = json,
                 };
+
+
+
+                log.LogInformation("Adaptive Created");
 
                 var skillResponse = new
                 {
@@ -980,14 +976,20 @@ namespace FunctionApp
                 }
                 };
 
+                log.LogInformation("Resp Created");
+                log.LogInformation(skillResponse.ToString());
+
+                
+                
+
+                //return new JsonResult(skillResponse);*/
+
+            }
+            else
+            {
+                resp.Add(new JProperty("board", pieces));
             }
             
-
-
-
-
-            JObject resp = new JObject();
-            resp.Add(new JProperty("board", pieces));
 
             log.LogInformation("returned");
             return new JsonResult(resp);
